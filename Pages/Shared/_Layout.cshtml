@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>@ViewData["OGTitle"] - Coderkick</title>
+    <meta name="description" content="@ViewData["OGDescription"]">
+    <meta name="og:title" content="@ViewData["OGTitle"]">
+    <meta name="og:description" content="@ViewData["OGDescription"]">
+    <link rel="stylesheet" href="/css/site.css" asp-append-version="true">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito:wght@400&family=Poppins:wght@400;600&family=Raleway:wght@300&family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet">
+</head>
+<body>
+    <div align="center" class="iconbar"><a href="/" class="icon">home</a> <epicspacer></epicspacer> <a href="/us" class="icon" data-toggle="tooltip" data-tooltip="Us">domain</a> <epicspacer></epicspacer> <a href="/projects" class="icon" data-toggle="tooltip" data-tooltip="Projects">folder</a> <epicspacer></epicspacer> <a href="/donate" class="icon" data-toggle="tooltip" data-tooltip="Donate">favorite</a></div>
+    <div align="center" class="iconbarRight"><a class="icon">public</a></div>
+    <div align="center">
+        <br><br><br>
+        <h1>@ViewData["Title"]</h1>
+        <p>@ViewData["Description"]</p>
+        <main>
+            @RenderBody()
+        </main>
+        <partial name="_CookieConsentPartial" />
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

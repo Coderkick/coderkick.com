@@ -1,0 +1,201 @@
+/*******************************************************************************
+*** Coderkick ******************************************************************
+*** site.css *******************************************************************
+*** github.com/Coderkick/coderkick.com/blob/main/wwwroot/css/site.css **********
+*** © Coderkick 2023 - coderkick.com/cdkl-lite *********************************
+*** Dark mode CSS for coderkick.com ********************************************
+*** docs.coderkick.com/s:CSS ***************************************************
+*******************************************************************************/
+
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url("/assets/MaterialIcons-Regular.ttf") format('truetype'); 
+}
+
+/* General Items */
+
+a[role="url"] {
+	font-family: 'Inter';
+	color: #9742ff;
+	text-decoration: none;
+	text-transform: uppercase;
+
+}
+a[role="url"]:hover {
+	animation: iconMarginEnlarge 0.3s;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+a[role="url"]:not(:hover) {
+	animation: iconMarginReduce 0.3s;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+a[role="url"]::after {
+	content: " ➜";
+}
+
+.icon {
+	font-family: 'Material Icons' !important;
+	font-size: 20px;
+	text-decoration: none;
+	background-color: transparent;
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+}
+
+.icon:hover {
+	animation: iconMarginEnlarge 0.3s;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.icon:not(:hover) {
+	animation: iconMarginReduce 0.3s;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.halfsize {
+	-moz-transform:scale(0.5);
+	-webkit-transform:scale(0.5);
+	transform:scale(0.5);
+}
+
+@keyframes iconMarginEnlarge {
+	from {margin-left: 5px; margin-right: 5px;}
+	to {margin-left: 10px; margin-right: 10px;}
+}
+@keyframes iconMarginReduce {
+	from {margin-left: 10px; margin-right: 10px;}
+	to {margin-left: 5px; margin-right: 5px;}
+}
+
+
+.iconbar {
+	padding: 5px;
+	margin: 5px;
+	border-radius: 10px;
+	position:fixed;
+	z-index: 1;
+	background-color: #120028;
+}
+
+.iconbarRight {
+	padding: 5px;
+	margin: 5px;
+	right: 5px;
+	top: 5px;
+	border-radius: 10px;
+	position:fixed;
+	z-index: 1;
+	background-color: #120028;
+}
+
+epicspacer {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
+a[role="navlink"] {
+	height: 100%;
+}
+
+body {
+	background-color: #120028;
+	color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+	padding: 10px;
+}
+
+input {
+	padding: 10px;
+	border: 1px solid white;
+	color: white;
+	background-color: transparent;
+	border-radius: 5px;
+	font-family: 'Cascadia Code';
+}
+
+input:focus {
+	border: 1px solid white;
+	outline: white;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	padding: 10px;
+	border: 1px solid white;
+	color: white;
+	background-color: transparent;
+	border-radius: 5px;
+	font-family: 'Cascadia Code';
+	cursor: pointer;
+}
+
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+	border: 1px solid #120028;
+	color: #120028;
+	background-color: white;
+	border-radius: 5px;
+	font-family: 'Cascadia Code';
+	cursor: pointer;
+}
+
+h1, h2, h3, div.item {
+	font-family: 'Poppins';
+}
+
+h4, h5, h6, p, li, ul {
+	font-family: 'Nunito';
+}
+
+code {
+	font-family: 'Cascadia Code';
+}
+
+icon {
+	font-family: 'Material Icons';
+	font-size: 20px;
+}
+
+/* Navbar */
+
+div.header {
+	grid-area: header;
+	border-bottom: 2px solid #9742ff;
+}
+a.item {
+	height: max-content;
+}
+
+img {
+	display: inline;
+}
+
+a[role="navlink"] {
+	height: 100%;
+	text-align: center;
+	display: inline;
+}
+
+::-moz-selection {
+	background-color: white;
+	color: #120028;
+	font-family: 'Cascadia Code';
+}
+
+::selection {
+	background-color: white;
+	color: #120028;
+	font-family: 'Cascadia Code';
+}
+
+main {
+	width: 90%;
+}
