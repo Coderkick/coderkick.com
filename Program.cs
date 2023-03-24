@@ -18,6 +18,13 @@ builder.Services
 builder.Services
     .AddRazorPages()
     .AddViewLocalization();
+/*
+builder.Services.AddAuthentication().AddGoogle(googleOptions =>
+    {
+        googleOptions.ClientId = builder.Configuration["Authentication:Google:ClientId"];
+        googleOptions.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+    });
+*/
 
 var app = builder.Build();
 if (!app.Environment.IsDevelopment())
@@ -32,6 +39,10 @@ if (!app.Environment.IsDevelopment())
 
 app.MapGet("/discord", () => {
     return Results.Redirect("https://discord.gg/XvQzSBRGZY");
+});
+
+app.MapGet("/poll", () => {
+    return Results.Redirect("https://strawpoll.com/polls/NoZr3PMKry3");
 });
 
 app.MapGet("/index", () => {
