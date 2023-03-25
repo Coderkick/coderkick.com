@@ -49,6 +49,10 @@ app.MapGet("/index", () => {
     return Results.Redirect("/");
 });
 
+app.MapGet("/redirect:{value:alpha}", (string value) => {
+    return Results.Redirect(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(value)));
+});
+
 app.UseStaticFiles();
 app.UseCookiePolicy();
 app.UseRouting();
