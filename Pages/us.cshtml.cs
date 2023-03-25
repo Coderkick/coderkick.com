@@ -5,9 +5,9 @@ namespace coderkickcom.Pages;
 
 public class UsModel : PageModel
 {
-    private readonly ILogger<PrivacyModel> _logger;
+    private readonly ILogger<UsModel> _logger;
 
-    public UsModel(ILogger<PrivacyModel> logger)
+    public UsModel(ILogger<UsModel> logger)
     {
         _logger = logger;
     }
