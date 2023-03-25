@@ -10,7 +10,7 @@ document.getElementsByTagName("p").onclick = function(p) {
         document.location = button.getAttribute("href")
     }
 }
-
+/*
 window.onload = function() {
     for (var i = 0; i < document.getElementsByTagName("a").length; i++) {
         if (!document.getElementsByTagName("a")[i].href.includes("coderkick.com/")) {
@@ -18,3 +18,4 @@ window.onload = function() {
         }
     };
 }
+*/
