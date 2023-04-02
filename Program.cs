@@ -27,9 +27,9 @@ builder.Services.AddAuthentication().AddGoogle(googleOptions =>
 */
 
 var app = builder.Build();
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsProduction())
 {
-    app.UseExceptionHandler("/Error");
+    app.UseExceptionHandler("/error");
     app.UseHsts();
 }
 
@@ -43,6 +43,11 @@ app.MapGet("/discord", () => {
 
 app.MapGet("/poll", () => {
     return Results.Redirect("https://strawpoll.com/polls/NoZr3PMKry3");
+});
+
+app.MapGet("/partnerships/discord/free-3-months-nitro", () => {
+    
+    return Results.Redirect("https://media.tenor.com/mgY_mTkz74IAAAAC/dark-troll-face-troll-face-sad.gif");
 });
 
 app.MapGet("/index", () => {
