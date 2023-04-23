@@ -13,14 +13,14 @@
             document.cookie = document.getElementById("cookieConsentButton").dataset.cookieString;
         };
     </script>
-        <div id="cookieToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <strong class="me-auto">Cookie Information</strong>
-                <small><a href="/legal/privacy">Learn more</a></small>
-                <button type="button" id="cookieConsentButton" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close" onclick="CookieConsent()" data-cookie-string="@cookieString"></button>
-            </div>
-            <div class="toast-body">
-                <p>We use essential cookies to make this website work as intended. Close this popup to stop it from showing again.</p>
-            </div>
+    <div id="cookieToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Cookie Information</strong>
+            <small><a href="/privacy">Learn more</a></small>
+            <button type="button" id="cookieConsentButton" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close" onclick="CookieConsent()" data-cookie-string="@cookieString"></button>
         </div>
+        <div class="toast-body">
+            <p>We use essential cookies to make this website work as intended. Close this popup to stop it from showing again.</p>
+        </div>
+    </div>
 }
