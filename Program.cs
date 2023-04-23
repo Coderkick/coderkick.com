@@ -6,25 +6,16 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
     options.CheckConsentNeeded = context => true;
 
     options.MinimumSameSitePolicy = SameSiteMode.None;
+    options.ConsentCookie.Name = "ConsentCookie";
+    options.ConsentCookie.Domain = "coderkick.com";
+    options.ConsentCookie.SameSite = SameSiteMode.None;
+    options.Secure = CookieSecurePolicy.Always;
 });
 
 builder.Services.AddPortableObjectLocalization();
 
-builder.Services
-    .Configure<RequestLocalizationOptions>(options => options
-        .AddSupportedCultures("fr", "cs")
-        .AddSupportedUICultures("fr", "cs"));
 
-builder.Services
-    .AddRazorPages()
-    .AddViewLocalization();
-/*
-builder.Services.AddAuthentication().AddGoogle(googleOptions =>
-    {
-        googleOptions.ClientId = builder.Configuration["Authentication:Google:ClientId"];
-        googleOptions.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
-    });
-*/
+builder.Services.AddRazorPages().AddViewLocalization();
 
 var app = builder.Build();
 if (app.Environment.IsProduction())
@@ -33,30 +24,22 @@ if (app.Environment.IsProduction())
     app.UseHsts();
 }
 
-/*app.MapGet("/redirect:{URL}", (URL) => {
-    return URL;
-});*/
-
 app.MapGet("/discord", () => {
     return Results.Redirect("https://discord.gg/XvQzSBRGZY");
 });
 
-app.MapGet("/poll", () => {
-    return Results.Redirect("https://strawpoll.com/polls/NoZr3PMKry3");
-});
-
-app.MapGet("/partnerships/discord/free-3-months-nitro", () => {
-    
-    return Results.Redirect("https://media.tenor.com/mgY_mTkz74IAAAAC/dark-troll-face-troll-face-sad.gif");
+app.MapGet("/api/internal/debug.list", () => {
+    String response = "";
+    foreach(var dir in Directory.GetDirectories("./wwwroot/DebugExtensions"))
+    {
+        response += dir.Replace("./wwwroot/DebugExtensions/", "") + "\n";
+    }
+    return Results.Text(response.Remove(response.Length - 2, 2));
 });
 
 app.MapGet("/index", () => {
     return Results.Redirect("/");
 });
-
-/*app.MapGet("/redirect:{value:alpha}", (string value) => {
-    return Results.Redirect(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(value)));
-});*/
 
 app.UseStaticFiles();
 app.UseCookiePolicy();
