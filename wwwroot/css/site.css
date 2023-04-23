@@ -1,196 +1,57 @@
-/*******************************************************************************
-*** Coderkick ******************************************************************
-*** site.css *******************************************************************
-*** github.com/Coderkick/coderkick.com/blob/main/wwwroot/css/site.css **********
-*** © Coderkick 2023 - coderkick.com/cdkl-lite *********************************
-*** Dark mode CSS for coderkick.com ********************************************
-*** docs.coderkick.com/s:CSS ***************************************************
-*******************************************************************************/
-
-/* Fonts */
-
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: url("/assets/MaterialIcons-Regular.ttf") format('truetype'); 
+[data-bs-theme="dark"] {
+    --bs-body-bg: #120028 !important;
+    --bs-body-color: #dadada !important;
+    --bs-tertiary-bg: #120028 !important;
+    --bs-info-text-emphasis: #120028 !important;
+    --bs-primary-text-emphasis: #120028 !important;
+    --bs-success-text-emphasis: #120028 !important;
+    --bs-danger-text-emphasis: #120028 !important;
+    --bs-warning-text-emphasis: #120028 !important;
 }
 
-/* Basics */
-
-main {
-    width: 90%;
-}
-
-/* General Items */
-
-a[role="url"] {
-    font-family: 'Inter';
-    color: #9742ff;
-    text-decoration: none;
-    text-transform: uppercase;
-
-}
-a[role="url"]:hover {
-    animation: iconMarginEnlarge 0.3s;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-a[role="url"]:not(:hover) {
-    animation: iconMarginReduce 0.3s;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-a[role="url"]::after {
-    content: " ➜";
+[data-bs-theme="light"] {
+    --bs-body-bg: #dadada !important;
+    --bs-body-color: #120028 !important;
+    --bs-tertiary-bg: #dadada !important;
+    --bs-info-text-emphasis: #dadada !important;
+    --bs-primary-text-emphasis: #dadada !important;
+    --bs-success-text-emphasis: #dadada !important;
+    --bs-danger-text-emphasis: #dadada !important;
+    --bs-warning-text-emphasis: #dadada !important;
 }
 
 
-.icon:hover {
-    animation: iconMarginEnlarge 0.3s;
-    margin-left: 10px;
-    margin-right: 10px;
+[data-bs-theme="dark"], [data-bs-theme="light"] {
+    --bs-font-sans-serif: "Space Grotesk" !important;
+    --bs-font-monospace: "Space Mono" !important;
 }
 
-.icon:not(:hover) {
-    animation: iconMarginReduce 0.3s;
-    margin-left: 5px;
-    margin-right: 5px;
+.navbar {
+    background-color: var(--bs-body-bg) !important;
 }
 
-.size-half {
-    -moz-transform:scale(0.5);
-    -webkit-transform:scale(0.5);
-    transform:scale(0.5);
+.navbar-brand, .nav-link {
+    color: var(--bs-body-color) !important;
 }
 
-
-
-body {
-    background-color: #120028;
-    color: #FFFFFF;
-    margin: 0px;
-    padding: 0px;
-    padding: 10px;
+.card {
+    border: none !important;
 }
 
-input {
-    padding: 10px;
-    border: 1px solid white;
-    color: white;
-    background-color: transparent;
-    border-radius: 5px;
-    font-family: 'Cascadia Code';
-}
-
-input:focus {
-    border: 1px solid white;
-    outline: white;
-}
-
-button, input[type="button"], input[type="reset"], input[type="submit"] {
-    padding: 10px;
-    border: 1px solid white;
-    color: white;
-    background-color: transparent;
-    border-radius: 5px;
-    font-family: 'Cascadia Code';
+#cdk {
     cursor: pointer;
 }
 
-button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
-    border: 1px solid #120028;
-    color: #120028;
-    background-color: white;
-    border-radius: 5px;
-    font-family: 'Cascadia Code';
-    cursor: pointer;
+.offcanvas-backdrop.fade.show {
+    pointer-events:none 
+   }
+
+html[data-bs-theme="dark"]::-moz-selection, html[data-bs-theme="dark"]::selection {
+	background-color: #dadada !important;
+	color: #120028 !important;
 }
 
-h1, h2, h3, div.item {
-    font-family: 'Poppins';
-}
-
-h4, h5, h6, p, li, ul {
-    font-family: 'Nunito';
-}
-
-code {
-    font-family: 'Cascadia Code';
-}
-
-
-
-/* Navbar */
-
-div.iconbar {
-    padding: 5px;
-    margin: 5px;
-    border-radius: 10px;
-    position:fixed;
-    z-index: 1;
-    background-color: #120028;
-}
-
-a.language-icon {
-    margin: 5px;
-    padding: 5px;
-    right: 5px;
-    top: 5px;
-    position: fixed;
-}
-
-a.icon {
-    font-family: 'Material Icons' !important;
-    font-size: 20px;
-    text-decoration: none;
-    background-color: transparent;
-    display: inline-block;
-    vertical-align: middle;
-    color: white;
-}
-
-epicspacer {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.icon:hover {
-    animation: iconMarginEnlarge 0.3s;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.icon:not(:hover) {
-    animation: iconMarginReduce 0.3s;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-/* Animations */
-
-@keyframes iconMarginEnlarge {
-    from {margin-left: 5px; margin-right: 5px;}
-    to {margin-left: 10px; margin-right: 10px;}
-}
-
-@keyframes iconMarginReduce {
-    from {margin-left: 10px; margin-right: 10px;}
-    to {margin-left: 5px; margin-right: 5px;}
-}
-
-/* Miscellaneous */
-
-::-moz-selection {
-    background-color: white;
-    color: #120028;
-    font-family: 'Cascadia Code';
-}
-
-::selection {
-    background-color: white;
-    color: #120028;
-    font-family: 'Cascadia Code';
+html[data-bs-theme="light"]::-moz-selection, html[data-bs-theme="light"]::selection {
+	background-color: #120028 !important;
+	color: #dadada !important;
 }
