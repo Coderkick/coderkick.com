@@ -2,30 +2,111 @@
 @model IndexModel
 @{
     ViewData["OGTitle"] = "Home";
-    ViewData["Title"] = "Welcome to Coderkick";
+    ViewData["Title"] = @Html.Raw("Welcome to <cdk id=\"cdk\">Coderkick</cdk>");
     ViewData["Description"] = "Coderkick is a non-profit software-developing organization with the goal of helping new developers and of giving to children tools to start their adventure in the programming world.";
     ViewData["OGDescription"] = "Coderkick is a non-profit software-developing organization with the goal of helping new developers and of giving to children tools to start their adventure in the programming world.";
 }
-<a role="url" href="https://coderkick.com/poll">CHECK OUR POLL</a>
 <br>
-<img src="/assets/accessible.png" class="size-half">
-<h1>Accessible</h1>
-<p>Everyone deserves equal access to technology, and a disability/disturb shouldn't get in the way of achieving so.</p>
-<img src="/assets/user-first.png" class="size-half">
-<h1>Users First</h1>
-<p>We work a lot on minimizing the risk of getting this website blocked for any possible reason. This is done to avoid the risk of getting this website blocked.</p>
-<img src="/assets/curated.png" class="size-half">
-<h1>Curated</h1>
-<p>The Coderkick experience must reach perfection. It's the hardest part, it's achieved in months or even years' time, but it is possible.</p>
-<img src="/assets/customizable.png" class="size-half">
-<h1>Yours</h1>
-<p>Most Coderkick products are made to be highly customizable, both in the technical and aestethic ways.</p>
-<img src="/assets/fun.png" class="size-half">
-<h1>Fun</h1>
-<p>We will do our best to keep the experience actually enjoyable.</p>
-<img src="/assets/international.png" class="size-half">
-<h1>International</h1>
-<p>Coderkick is going to be available in as many languages as we can find translators for. <a role="url" href="https://coderkick.com/translate">Apply</a> here to translate our website in another language or fix some imperfections in an already-present one.</p>
-<img src="/assets/nonprofit.png" class="size-half">
-<h1>...and free.</h1>
-<p>We lose money every month to ensure Coderkick is free for everyone, and the amount of losses will only increase as we get more users. If you can, you might <a role="url" href="https://coderkick.com/donate">donate</a> to help us manage these costs. As little as 6$, as of now, can pay off a whole month of server rent. ❤️</p>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/assets/$theme$/accessible.png" class="img-fluid rounded-start" alt="Accessibility icon">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Accessible</h5>
+        <p class="card-text">Everyone deserves equal access to technology, and a disability/disturb shouldn't get in the way of achieving so.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/assets/$theme$/user-first.png" class="img-fluid rounded-start" alt="Users First icon">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Users First</h5>
+        <p class="card-text">We work a lot on minimizing the risk of getting this website blocked for any possible reason. This is done to avoid the risk of getting this website blocked.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/assets/$theme$/curated.png" class="img-fluid rounded-start" alt="Curated icon">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Well-done</h5>
+        <p class="card-text">The Coderkick experience must reach perfection. It's the hardest part, it's achieved in months or even years' time, but it is possible.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/assets/$theme$/customizable.png" class="img-fluid rounded-start" alt="Customizable icon">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Yours</h5>
+        <p class="card-text">Most Coderkick products are made to be highly customizable, both in the technical and aestethic ways.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/assets/$theme$/fun.png" class="img-fluid rounded-start" alt="Fun icon">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Fun</h5>
+        <p class="card-text">We will do our best to keep the experience actually enjoyable.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/assets/$theme$/international.png" class="img-fluid rounded-start" alt="International icon">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">International</h5>
+        <p class="card-text">Coderkick is going to be available in as many languages as we can find translators for. <a href="/translate">Apply</a> here to translate our website in another language or fix some imperfections in an already-present one.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/assets/$theme$/nonprofit.png" class="img-fluid rounded-start" alt="Free icon">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">...and free</h5>
+        <p class="card-text">We lose money every month to ensure Coderkick is free for everyone, and the amount of losses will only increase as we get more users. If you can, you might <a href="/donate">donate</a> to help us manage these costs. As little as 6$, as of now, can pay off a whole month of server rent. <i class="bi bi-heart-fill"></i></p>
+
+      </div>
+    </div>
+  </div>
+</div>
