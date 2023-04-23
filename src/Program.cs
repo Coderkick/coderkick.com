@@ -42,7 +42,7 @@ app.MapGet("/api/internal/debug.list", () => {
     {
         response += dir.Replace("./wwwroot/DebugExtensions/", "") + "\n";
     }
-    return Results.Text(response.Remove(response.Length - 2, 2));
+    return Results.Text(response.Substring(0, response.Length - 2));
 });
 
 app.MapGet("/index", () => {
