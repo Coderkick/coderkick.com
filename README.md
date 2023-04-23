@@ -7,6 +7,8 @@ Welcome to our GitHub repo. Here we host the source code behind our website http
 ## Legal
 The full website is licensed under [CDKL](https://coderkick.com/cdkl), but individual parts of it, recognizable through a banner at the start of the file, use the [Lite](https://coderkick.com/cdkl-lite) version instead.
 
+Coderkick runs on various libraries: https://coderkick.com/legal/licenses
+
 ![CDKL-Lite Example Banner](https://github.com/Coderkick/coderkick.com/blob/main/images/license-banner.png?raw=true)
 
 That's it. Hope you wil enjoy our website. Thanks for any support. ❤️
