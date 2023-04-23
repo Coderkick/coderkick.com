@@ -28,14 +28,6 @@ app.MapGet("/discord", () => {
     return Results.Redirect("https://discord.gg/XvQzSBRGZY");
 });
 
-app.MapGet("/cdkl", () => {
-    return Results.Redirect("/legal");
-});
-
-app.MapGet("/cdkl-lite", () => {
-    return Results.Redirect("/legal");
-});
-
 app.MapGet("/api/internal/debug.list", () => {
     String response = "";
     foreach(var dir in Directory.GetDirectories("./wwwroot/DebugExtensions"))
