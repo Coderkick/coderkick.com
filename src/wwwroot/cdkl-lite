@@ -1,0 +1,62 @@
+Coderkick License Lite v1 (CDKL-Lite)
+;; 2020–2023, Coderkick
+;; https://coderkick.com/cdkl-lite
+
+;; The following document is an adaptation of the CDKL License.
+;; By utilizing, modifying or distributing this software in any way,
+;; shape or form as described here, you agree to accept all of the following
+;; terms and conditions.
+
+;; Last updated 2023-03-20
+
+⋯≡ Product Terms and Conditions for use, modifications, reproduction, distribution and contributions ≡⋯
+
+;—————————;—————————;—————————;—————————;—————————;—————————;—————————;—————————;
+
+Definitions:
+	├ "Team", "Staff", "we", "us" shall mean the developer team behind the software,
+          including but not limited to the moderation team and the Quality Assurance team.
+
+	├ "License", "License document", "Terms and Conditions", "ToS",
+	  "License agreement" shall refer to this license document representing the
+	  legal terms and conditions to be followed when using or reproducing this software
+	  which is affected by it.
+
+	├ "You", "Your" shall refer to the end user accepting and abiding to this
+	  license.
+
+	├ "Service", "Product", "Platform", "Source", "Source code", "Code", "Software", "Program" shall mean the source
+	  code of the software, program, service or product taking advantage of this
+	  license. This includes, and is not limited to documentation, wikis and
+	  repositories.
+
+	├ "Fork", "Derivation(s)", "Modification(s)", "Derivative work" shall mean the
+	  ability of the end user to fork, modify and adapt this code to their will,
+	  within the terms prescribed by this license.
+
+	└ "Contribution", "PR" shall refer to your possibility to contribute to the
+	  development process of the software.
+
+;—————————;—————————;—————————;—————————;—————————;—————————;—————————;—————————;
+
+Permissions:
+	├ You are granted the right to modify and/or redistribute the source code.
+
+	└ You are granted the right to take advantage, modify, fork and/or
+	  redistribute this software for personal and commercial use.
+
+Limitations:
+	├ We are not to be held responsible and/or liable for any damage caused by
+	  the source code.
+
+	├ The Software comes with no guarantee or warranties, either express or
+	  implied, including but not limited to entitlement, non–infringement,
+	  merchantability or fitness for a particular purpose, except when
+	  specifically documented otherwise.
+
+	├ You are not allowed to trademark or patent the original source code.
+	
+	└ You should not take credit, nor are granted ownership of the original
+	  source code. You are in the right to be credited as a contributor if you
+	  make any relevant modifications in your fork or if you directly contribute
+	  to the development.
