@@ -13,6 +13,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="7.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Twitter" Version="7.0.4" />
     <PackageReference Include="OrchardCore.Localization.Core" Version="1.5.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
   </ItemGroup>
 
 </Project>
