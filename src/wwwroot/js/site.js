@@ -60,7 +60,7 @@ window.onload = async function() {
             }
         }
     }
-    $('ext').map(function() { if (Cookies.get("enabledExtensions").split("|").includes(this.getAttribute("ext-id"))) { this.style.display = "block"; } else { this.remove(); } }).get()
+    $('ext').map(function() { if (Cookies.get("enabledExtensions") && Cookies.get("enabledExtensions").split("|").includes(this.getAttribute("ext-id"))) { this.style.display = "block"; } else { this.remove(); } }).get()
 }
 
 document.getElementById("cdk").addEventListener("dblclick", (key) => {
