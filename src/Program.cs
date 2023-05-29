@@ -14,7 +14,6 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 
 builder.Services.AddPortableObjectLocalization();
 
-
 builder.Services.AddRazorPages().AddViewLocalization();
 
 var app = builder.Build();
