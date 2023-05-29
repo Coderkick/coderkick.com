@@ -7,6 +7,7 @@
     --bs-success-text-emphasis: #120028 !important;
     --bs-danger-text-emphasis: #120028 !important;
     --bs-warning-text-emphasis: #120028 !important;
+    --bs-secondary-bg: #4f46e5 !important;
 }
 
 [data-bs-theme="light"] {
@@ -18,12 +19,22 @@
     --bs-success-text-emphasis: #dadada !important;
     --bs-danger-text-emphasis: #dadada !important;
     --bs-warning-text-emphasis: #dadada !important;
+    --bs-secondary-bg: #4f46e5 !important;
 }
 
 
 [data-bs-theme="dark"], [data-bs-theme="light"] {
-    --bs-font-sans-serif: "Space Grotesk" !important;
-    --bs-font-monospace: "Space Mono" !important;
+    --header-font: "Plus Jakarta Sans" !important;
+    --content-font: "Inter" !important;
+}
+
+h1, h2, h3, h4, h5, h6 .dropdown-item, .nav-link {
+    font-family: var(--header-font) !important;
+    font-weight: 700;
+}
+
+* {
+    font-family: var(--content-font);
 }
 
 .navbar {
@@ -44,14 +55,25 @@
 
 .offcanvas-backdrop.fade.show {
     pointer-events:none 
-   }
+}
 
-html[data-bs-theme="dark"]::-moz-selection, html[data-bs-theme="dark"]::selection {
+::-moz-selection[data-bs-theme="dark"], ::selection[data-bs-theme="dark"] {
 	background-color: #dadada !important;
 	color: #120028 !important;
 }
 
-html[data-bs-theme="light"]::-moz-selection, html[data-bs-theme="light"]::selection {
+::-moz-selection[data-bs-theme="light"], ::selection[data-bs-theme="light"] {
 	background-color: #120028 !important;
 	color: #dadada !important;
+}
+
+body {
+    margin:0;
+    padding:0;
+    height:100vh;
+ }
+
+.navbar-brand {
+    font-family: var(--header-font);
+    font-weight: 800;
 }
