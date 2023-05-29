@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito:wght@200&family=Poppins:wght@400;600&family=Raleway:wght@300&family=Source+Code+Pro:wght@700&family=Space+Grotesk:wght@700&display=swap&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Plus+Jakarta+Sans&family=Flow+Circular&display=swap" rel="stylesheet">
     <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js "></script>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
         <partial name="_DebugModePartial" />
         <partial name="_Navbar" />
         <div align="center">
@@ -34,6 +34,7 @@
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
             <partial name="_CookieConsentPartial" />
         </div>
+        <partial name="_Footer" />
         <a rel="me" hidden href="https://mastodon.social/@@coderkick"></a>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
