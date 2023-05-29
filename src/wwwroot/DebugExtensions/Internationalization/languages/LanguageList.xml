@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<languagelist>
+    <language>
+        <EnglishName>English</EnglishName>
+        <NativeName>English</NativeName>
+        <LanguageCode>en</LanguageCode>
+    </language>
+    <language>
+        <EnglishName>Italian</EnglishName>
+        <NativeName>Italiano</NativeName>
+        <LanguageCode>it</LanguageCode>
+    </language>
+    <language>
+        <EnglishName>Spanish</EnglishName>
+        <NativeName>Español</NativeName>
+        <LanguageCode>es</LanguageCode>
+    </language>
+    <language>
+        <EnglishName>German</EnglishName>
+        <NativeName>Deutsch</NativeName>
+        <LanguageCode>de</LanguageCode>
+    </language>
+    <language>
+        <EnglishName>Russian</EnglishName>
+        <NativeName>Pусский</NativeName>
+        <LanguageCode>ru</LanguageCode>
+    </language>
+    <language>
+        <EnglishName>Chinese (Simplified)</EnglishName>
+        <NativeName>简体字</NativeName>
+        <LanguageCode>zh</LanguageCode>
+    </language>
+</languagelist>
