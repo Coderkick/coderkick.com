@@ -27,6 +27,10 @@ app.MapGet("/discord", () => {
     return Results.Redirect("https://discord.gg/XvQzSBRGZY");
 });
 
+app.MapGet("/revolt", () => {
+    return Results.Redirect("https://rvlt.gg/Afd5wA4B");
+});
+
 app.MapGet("/api/internal/debug.list", () => {
     String response = "";
     foreach(var dir in Directory.GetDirectories("./wwwroot/DebugExtensions"))
