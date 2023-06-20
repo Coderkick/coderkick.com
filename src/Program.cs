@@ -23,6 +23,7 @@ if (app.Environment.IsProduction())
     app.UseHsts();
 }
 
+
 app.MapGet("/discord", () => {
     return Results.Redirect("https://discord.gg/XvQzSBRGZY");
 });
@@ -32,16 +33,20 @@ app.MapGet("/revolt", () => {
 });
 
 app.MapGet("/api/internal/debug.list", () => {
-    String response = "";
+    string response = "";
     foreach(var dir in Directory.GetDirectories("./wwwroot/DebugExtensions"))
     {
         response += dir.Replace("./wwwroot/DebugExtensions/", "") + "\n";
     }
-    return Results.Text(response.Substring(0, response.Length - 1));
+    return Results.Text(response[..^1]);
 });
 
 app.MapGet("/index", () => {
     return Results.Redirect("/");
+});
+
+app.MapGet("/donate", () => {
+    return Results.Redirect("https://www.patreon.com/CoderkickDevs");
 });
 
 app.UseStaticFiles();
